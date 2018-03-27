@@ -17,11 +17,10 @@ std::string ft_cut_str(std::string str)
 	std::string temp;
 
 	temp = str;
-	if (!(str.length() > 9))
+	if (str.length() < 10)
 		return (str);
 	temp[9] = '.';
-	for (int i = 10; i < str.length(); i++)
-		temp[i] = '\0';
+	temp.erase(10);
 	return (temp);
 }
 
@@ -30,9 +29,9 @@ std::string ft_put_space(std::string str)
 	std::string temp = "            ";
 	int		len = 0;
 
-	len = 11 - str.length();
-	for (int i = 10; i > len; i--)
-		temp[i] = '\0';
+	len = 12 - str.length();
+	// std::cout << len << std::endl;
+	temp.erase(len);
 	return (temp);
 }
 
@@ -100,8 +99,6 @@ void	Phonebook::search_contact()
 
 void	Phonebook::add_contact(int index)
 {
-	if (index > 8)
-		std::cout << "Phonebook is full!" << std::endl;
 	std::cout << "Enter your fist name:" << std::endl;
 	m_contacts[index].set_firstname(get_line());
 	std::cout << "Enter your last name:" << std::endl;

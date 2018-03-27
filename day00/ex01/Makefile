@@ -15,7 +15,7 @@ FILES = main Contact Phonebook
 HDRS = Contact.h Phonebook.h
 SRC = $(addsuffix .cpp, $(FILES))
 OBJ = $(addsuffix .o, $(FILES))
-# FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 

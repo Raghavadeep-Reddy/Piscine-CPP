@@ -15,6 +15,7 @@
 
 # include "Contact.h"
 
+std::string		ft_cut_str(std::string str);
 std::string		get_line();
 int				ft_strlen(std::string str);
 

@@ -22,13 +22,7 @@ std::string get_line()
 	std::exit(-1);
 }
 
-void	usage()
-{
-	std::cout << "Wrong command, ";
-	std::cout << "try 'ADD' | 'SEARCH' | 'EXIT'\n";
-}
-
-int main(int argc, char **argv)
+int			main(void)
 {
 	Phonebook	book;
 	std::string	str;
@@ -40,13 +34,18 @@ int main(int argc, char **argv)
 		if (str == "EXIT")
 			std::exit(1);
 		else if (str == "ADD") {
-			book.add_contact(index++);
+			if (index > 7)
+				std::cout << "Phonebook is full, GO AWAY!" << std::endl;
+			else
+				book.add_contact(index++);
 		}
 		else if (str == "SEARCH") {
 			book.search_contact();
 		}
-		else
-			usage();
+		else {
+			std::cout << "Wrong command, ";
+			std::cout << "try 'ADD' | 'SEARCH' | 'EXIT'\n";
+		}
 	}
 	return (0);
 }
