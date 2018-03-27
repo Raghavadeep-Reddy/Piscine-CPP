@@ -11,7 +11,8 @@
 # **************************************************************************** #
 
 NAME = phonebook
-FILES = main
+FILES = main Contact Phonebook
+HDRS = Contact.h Phonebook.h
 SRC = $(addsuffix .cpp, $(FILES))
 OBJ = $(addsuffix .o, $(FILES))
 # FLAGS = -Wall -Wextra -Werror
@@ -20,7 +21,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	g++ $(OBJ) -o $(NAME)
-%.o: %.cpp
+%.o: %.cpp $(HDRS)
 	g++ -o $@ $(FLAGS) -c $<
 clean:
 	rm -rf $(OBJ)

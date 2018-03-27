@@ -10,12 +10,43 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
-#include <iomanip>
-#include <iostream>
+#include "Phonebook.h"
+
+std::string get_line()
+{
+	std::string str;
+
+	if (std::getline(std::cin, str))
+		return (str);
+	std::cout << "Error read input\n";
+	std::exit(-1);
+}
+
+void	usage()
+{
+	std::cout << "Wrong command, ";
+	std::cout << "try 'ADD' | 'SEARCH' | 'EXIT'\n";
+}
 
 int main(int argc, char **argv)
 {
-	std::cin.get();
+	Phonebook	book;
+	std::string	str;
+	int			index = 0;
+
+	while (1)
+	{
+		str = get_line();
+		if (str == "EXIT")
+			std::exit(1);
+		else if (str == "ADD") {
+			book.add_contact(index++);
+		}
+		else if (str == "SEARCH") {
+			book.search_contact();
+		}
+		else
+			usage();
+	}
 	return (0);
 }
