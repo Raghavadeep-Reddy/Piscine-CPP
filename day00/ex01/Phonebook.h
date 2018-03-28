@@ -15,20 +15,18 @@
 
 # include "Contact.h"
 
-std::string		ft_cut_str(std::string str);
+std::string		ft_cut_str(const std::string& str);
 std::string		get_line();
-int				ft_strlen(std::string str);
+int				ft_strlen(const std::string& str);
 
 class Phonebook {
 private:
 	Contact m_contacts[8];
 	int		number_of_contacts;
 public:
-	Phonebook(){
-		number_of_contacts = 0;
-	}
-	void add_contact(int index);
-	void search_contact();
+			Phonebook();
+	void	add_contact(int index);
+	void	search_contact();
 };
 
 #endif

@@ -12,57 +12,57 @@
 
 #include "Contact.h"
 
-void	Contact::set_firstname( std::string str)
+void	Contact::set_firstname( const std::string& str)
 {
 	this->firstname = str;
 }
 
-void	Contact::set_lastname( std::string str)
+void	Contact::set_lastname( const std::string& str)
 {
 	this->lastname = str;
 }
 
-void	Contact::set_nickname( std::string str)
+void	Contact::set_nickname( const std::string& str)
 {
 	this->nickname = str;
 }
 
-void	Contact::set_login( std::string str)
+void	Contact::set_login( const std::string& str)
 {
 	this->login = str;
 }
 
-void	Contact::set_address( std::string str)
+void	Contact::set_address( const std::string& str)
 {
 	this->address = str;
 }
 
-void	Contact::set_email( std::string str)
+void	Contact::set_email( const std::string& str)
 {
 	this->email = str;
 }
 
-void	Contact::set_phone( std::string str)
+void	Contact::set_phone( const std::string& str)
 {
 	this->phone = str;
 }
 
-void	Contact::set_birthday( std::string str)
+void	Contact::set_birthday( const std::string& str)
 {
 	this->birthday = str;
 }
 
-void	Contact::set_meal( std::string str)
+void	Contact::set_meal( const std::string& str)
 {
 	this->meal = str;
 }
 
-void	Contact::set_underwearcolor( std::string str)
+void	Contact::set_underwearcolor( const std::string& str)
 {
 	this->underwearcolor = str;
 }
 
-void	Contact::set_secret( std::string str)
+void	Contact::set_secret( const std::string& str)
 {
 	this->secret = str;
 }

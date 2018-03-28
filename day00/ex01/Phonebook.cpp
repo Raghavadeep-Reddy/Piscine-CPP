@@ -12,7 +12,11 @@
 
 #include "Phonebook.h"
 
-std::string ft_cut_str(std::string str)
+Phonebook::Phonebook() {
+	number_of_contacts = 0;
+}
+
+std::string ft_cut_str(const std::string& str)
 {
 	std::string temp;
 
@@ -24,13 +28,12 @@ std::string ft_cut_str(std::string str)
 	return (temp);
 }
 
-std::string ft_put_space(std::string str)
+std::string ft_put_space(const std::string& str)
 {
 	std::string temp = "            ";
 	int		len = 0;
 
 	len = 12 - str.length();
-	// std::cout << len << std::endl;
 	temp.erase(len);
 	return (temp);
 }

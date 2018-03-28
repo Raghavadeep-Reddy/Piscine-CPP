@@ -31,17 +31,17 @@ private:
 	std::string underwearcolor;
 	std::string secret;
 public:
-	void	set_firstname( std::string );
-	void	set_lastname( std::string );
-	void	set_nickname( std::string );
-	void	set_login( std::string );
-	void	set_address( std::string );
-	void	set_email( std::string );
-	void	set_phone( std::string );
-	void	set_birthday( std::string );
-	void	set_meal( std::string );
-	void	set_underwearcolor( std::string );
-	void	set_secret( std::string );
+	void	set_firstname( const std::string& str );
+	void	set_lastname( const std::string& str );
+	void	set_nickname( const std::string& str );
+	void	set_login( const std::string& str );
+	void	set_address( const std::string& str );
+	void	set_email( const std::string& str );
+	void	set_phone( const std::string& str );
+	void	set_birthday( const std::string& str );
+	void	set_meal( const std::string& str );
+	void	set_underwearcolor( const std::string& str );
+	void	set_secret( const std::string& str );
 
 	std::string	get_firstname();
 	std::string	get_lastname();
