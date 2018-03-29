@@ -28,12 +28,12 @@ std::string ft_cut_str(const std::string& str)
 	return (temp);
 }
 
-std::string ft_put_space(const std::string& str)
+std::string ft_put_space(const int& length)
 {
 	std::string temp = "            ";
 	int		len = 0;
 
-	len = 12 - str.length();
+	len = 12 - length;
 	temp.erase(len);
 	return (temp);
 }
@@ -56,8 +56,8 @@ void	Phonebook::search_contact()
 		fn = ft_cut_str(m_contacts[j].get_firstname());
 		ln = ft_cut_str(m_contacts[j].get_lastname());
 		std::cout << j + 1 << "           ";
-		std::cout << fn << ft_put_space(fn);
-		std::cout << ln << ft_put_space(ln);
+		std::cout << fn << ft_put_space(fn.length());
+		std::cout << ln << ft_put_space(ln.length());
 		std::cout << ft_cut_str(m_contacts[j].get_nickname()) << std::endl;
 	}
 	std::cout << "Select index:" << std::endl;
