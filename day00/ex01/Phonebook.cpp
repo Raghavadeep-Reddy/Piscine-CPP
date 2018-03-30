@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.h"
+#include "Phonebook.hpp"
 
 Phonebook::Phonebook() {
 	number_of_contacts = 0;

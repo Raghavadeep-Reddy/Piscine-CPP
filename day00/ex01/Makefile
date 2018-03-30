@@ -12,7 +12,7 @@
 
 NAME = phonebook
 FILES = main Contact Phonebook
-HDRS = Contact.h Phonebook.h
+HDRS = Contact.hpp Phonebook.hpp
 SRC = $(addsuffix .cpp, $(FILES))
 OBJ = $(addsuffix .o, $(FILES))
 FLAGS = -Wall -Wextra -Werror

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.h"
+#include "Contact.hpp"
 
 void	Contact::set_firstname( const std::string& str)
 {
