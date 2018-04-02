@@ -23,10 +23,12 @@ class Phonebook {
 private:
 	Contact m_contacts[8];
 	int		number_of_contacts;
+	mutable int contacts;
 public:
 			Phonebook();
 	void	add_contact(int index);
 	void	search_contact();
+	int		get_num_contacts() const;
 };
 
 #endif

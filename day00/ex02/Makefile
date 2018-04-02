@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/03/26 21:04:31 by omiroshn          #+#    #+#              #
-#    Updated: 2018/03/26 21:04:32 by omiroshn         ###   ########.fr        #
+#    Created: 2018/04/02 16:31:07 by omiroshn          #+#    #+#              #
+#    Updated: 2018/04/02 16:31:08 by omiroshn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phonebook
-FILES = main Contact Phonebook
-HDRS = Contact.hpp Phonebook.hpp
+NAME = account
+FILES = Account.class tests
+HDRS = Account.class.hpp
 SRC = $(addsuffix .cpp, $(FILES))
 OBJ = $(addsuffix .o, $(FILES))
-FLAGS = -Wall -Wextra -Werror
+# FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 

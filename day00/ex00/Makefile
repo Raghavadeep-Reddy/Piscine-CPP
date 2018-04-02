@@ -18,9 +18,9 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	g++ $(OBJ) -o $(NAME)
+	clang++ $(OBJ) -o $(NAME)
 %.o: %.cpp
-	g++ -o $@ $(FLAGS) -c $<
+	clang++ -o $@ $(FLAGS) -c $<
 clean:
 	rm -rf $(OBJ)
 fclean: clean

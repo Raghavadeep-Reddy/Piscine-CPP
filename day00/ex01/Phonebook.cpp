@@ -14,6 +14,14 @@
 
 Phonebook::Phonebook() {
 	number_of_contacts = 0;
+	std::cout << "   Welcome to the Phonebook!" << std::endl;
+	std::cout << "<< To add or search a contact type: ADD or SEARCH >>" << std::endl;
+	std::cout << "<< To exit type: EXIT >>" << std::endl;
+}
+
+int Phonebook::get_num_contacts() const {
+	this->contacts = 8;
+	return (this->contacts);
 }
 
 std::string ft_cut_str(const std::string& str)
@@ -30,10 +38,10 @@ std::string ft_cut_str(const std::string& str)
 
 std::string ft_put_space(const int& length)
 {
-	std::string temp = "            ";
+	std::string temp = "          ";
 	int		len = 0;
 
-	len = 12 - length;
+	len = temp.length() - length;
 	temp.erase(len);
 	return (temp);
 }
@@ -41,8 +49,10 @@ std::string ft_put_space(const int& length)
 void	Phonebook::search_contact()
 {
 	int			i = 0;
+	std::string num;
 	std::string fn;
 	std::string ln;
+	std::string nn;
 	std::string	str;
 
 	if (Phonebook::number_of_contacts == 0)
@@ -50,15 +60,18 @@ void	Phonebook::search_contact()
 		std::cout << "No data to show." << std::endl;
 		return ;
 	}
-	std::cout << "Index     | Name      | Last name | Nickname  |" << std::endl;
+	std::cout << "|     Index|      Name| Last name|  Nickname|" << std::endl;
 	for (int j = 0; j < Phonebook::number_of_contacts; j++)
 	{
+		num = std::to_string(j + 1);
 		fn = ft_cut_str(m_contacts[j].get_firstname());
 		ln = ft_cut_str(m_contacts[j].get_lastname());
-		std::cout << j + 1 << "           ";
-		std::cout << fn << ft_put_space(fn.length());
-		std::cout << ln << ft_put_space(ln.length());
-		std::cout << ft_cut_str(m_contacts[j].get_nickname()) << std::endl;
+		nn = ft_cut_str(m_contacts[j].get_nickname());
+		std::cout << "|" << ft_put_space(num.length()) << num;
+		std::cout << "|" << ft_put_space(fn.length()) << fn;
+		std::cout << "|" << ft_put_space(ln.length()) << ln;
+		std::cout << "|" << ft_put_space(nn.length()) << nn;
+		std::cout << "|" << std::endl;
 	}
 	std::cout << "Select index:" << std::endl;
 	while (1)

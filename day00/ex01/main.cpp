@@ -30,11 +30,12 @@ int			main(void)
 
 	while (1)
 	{
+		std::cout << "Type your command:" << std::endl;
 		str = get_line();
 		if (str == "EXIT")
 			std::exit(1);
 		else if (str == "ADD") {
-			if (index > 7)
+			if (index >= book.get_num_contacts())
 				std::cout << "Phonebook is full, GO AWAY!" << std::endl;
 			else
 				book.add_contact(index++);
