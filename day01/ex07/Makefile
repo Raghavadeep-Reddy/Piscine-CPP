@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/04/02 16:31:07 by omiroshn          #+#    #+#              #
-#    Updated: 2018/04/03 19:03:37 by omiroshn         ###   ########.fr        #
+#    Created: 2018/04/03 19:02:16 by omiroshn          #+#    #+#              #
+#    Updated: 2018/04/03 19:02:18 by omiroshn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = account
-FILES = Account.class tests
-HDRS = Account.class.hpp
+NAME = replace
+FILES = main
+HDRS = 
 SRC = $(addsuffix .cpp, $(FILES))
 OBJ = $(addsuffix .o, $(FILES))
-FLAGS = -Wall -Wextra -Werror
+# FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
