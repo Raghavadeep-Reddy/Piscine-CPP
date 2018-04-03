@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/30 17:58:05 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/03/30 17:58:06 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/03 15:15:56 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/03 15:15:59 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#include "ZombieHorde.hpp"
 
-#include <iostream>
+ZombieHorde::ZombieHorde(int N) {
+	this->numOfZombies = N;
+	this->zombie = new Zombie[N];
+	for (int i = 0; i < N; ++i) {
+		this->zombie[i].setRandomName();
+		zombie[i].setZombieType();
+	}
+}
 
-class Pony {
-private:
+ZombieHorde::~ZombieHorde() {
 
-	int					m_age;
-	int					m_speed;
-	int					m_rainbow_power;
+}
 
-public:
-
-	Pony();
-	~Pony();
-
-	void	pony_run();
-	void	pony_fly();
-	void	pony_train();
-	void	pony_grow();
-};
-
-#endif
+void	ZombieHorde::announce() {
+	for (int i = 0; i < this->numOfZombies; ++i) {
+		this->zombie[i].announce();
+	}
+}

@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/30 17:58:05 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/03/30 17:58:06 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/03 17:36:36 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/03 17:36:36 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-#include <iostream>
+#include "Weapon.hpp"
 
-class Pony {
+class HumanB
+{
 private:
-
-	int					m_age;
-	int					m_speed;
-	int					m_rainbow_power;
-
+	Weapon		*weapon;
+	std::string	name;
 public:
+	HumanB(std::string name);
+	~HumanB();
 
-	Pony();
-	~Pony();
-
-	void	pony_run();
-	void	pony_fly();
-	void	pony_train();
-	void	pony_grow();
+	void	setWeapon(Weapon &weapon);
+	void	attack();
 };
 
 #endif

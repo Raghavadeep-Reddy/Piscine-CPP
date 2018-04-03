@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/30 17:58:05 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/03/30 17:58:06 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/03 14:22:47 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/03 14:22:49 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#include "Zombie.hpp"
+#include "ZombieHorde.hpp"
 
-#include <iostream>
-
-class Pony {
-private:
-
-	int					m_age;
-	int					m_speed;
-	int					m_rainbow_power;
-
-public:
-
-	Pony();
-	~Pony();
-
-	void	pony_run();
-	void	pony_fly();
-	void	pony_train();
-	void	pony_grow();
-};
-
-#endif
+int main()
+{
+	srand((long)time(NULL));
+	ZombieHorde *horde = new ZombieHorde(7);
+	horde->announce();
+	delete horde;
+	return (0);
+}

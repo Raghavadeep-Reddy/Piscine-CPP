@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/30 17:58:05 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/03/30 17:58:06 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/03 17:36:08 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/03 17:36:09 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#include "Weapon.hpp"
 
-#include <iostream>
+Weapon::Weapon(std::string type)
+		: type(type)
+{
 
-class Pony {
-private:
+}
 
-	int					m_age;
-	int					m_speed;
-	int					m_rainbow_power;
+Weapon::~Weapon() {
 
-public:
+}
 
-	Pony();
-	~Pony();
+void		Weapon::setType(const std::string type) {
+	this->type = type;
+}
 
-	void	pony_run();
-	void	pony_fly();
-	void	pony_train();
-	void	pony_grow();
-};
-
-#endif
+const std::string &Weapon::getType() {
+	return (this->type);
+}

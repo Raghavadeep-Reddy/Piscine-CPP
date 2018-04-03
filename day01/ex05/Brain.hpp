@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/30 17:58:05 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/03/30 17:58:06 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/03 16:22:43 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/03 16:22:44 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 #include <iostream>
+#include <sstream>
 
-class Pony {
-private:
-
-	int					m_age;
-	int					m_speed;
-	int					m_rainbow_power;
-
+class Brain {
 public:
-
-	Pony();
-	~Pony();
-
-	void	pony_run();
-	void	pony_fly();
-	void	pony_train();
-	void	pony_grow();
+	Brain();
+	~Brain();
+	
+	std::string	identify() const;
 };
 
 #endif

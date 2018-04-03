@@ -5,36 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/30 17:58:21 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/03/30 17:58:23 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/03 17:36:49 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/03 17:36:50 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-void	ponyOnTheHeap()
+int main()
 {
-	Pony *pony = new Pony();
+	{
+		Weapon club = Weapon("crude spiked club"); //spiked
 
-	pony->pony_run();
-	pony->pony_train();
-	pony->pony_grow();
-	delete pony;
-}
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	{
+		Weapon club = Weapon("crude spiked club");
 
-void	ponyOnTheStack()
-{
-	Pony pony;
-
-	pony.pony_fly();
-	pony.pony_train();
-	pony.pony_grow();
-}
-
-int	main(int argc, char **argv)
-{
-	ponyOnTheHeap();
-	std::cout << "==================" << std::endl;
-	ponyOnTheStack();
-	return (0);
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
 }

@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/30 17:58:05 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/03/30 17:58:06 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/03 16:22:36 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/03 16:22:37 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#include "Brain.hpp"
 
-#include <iostream>
+Brain::Brain() {
 
-class Pony {
-private:
+}
 
-	int					m_age;
-	int					m_speed;
-	int					m_rainbow_power;
+Brain::~Brain() {
 
-public:
+}
 
-	Pony();
-	~Pony();
+std::string	Brain::identify() const {
+	std::string str;
+	std::stringstream ss;
 
-	void	pony_run();
-	void	pony_fly();
-	void	pony_train();
-	void	pony_grow();
-};
-
-#endif
+	ss << this;
+	str = ss.str();
+	for (int i = 2; i < str.length(); ++i) {
+		str[i] = toupper(str[i]);
+	}
+	return (str);
+}

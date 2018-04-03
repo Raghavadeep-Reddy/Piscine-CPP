@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/30 17:58:05 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/03/30 17:58:06 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/03 14:22:21 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/03 14:22:22 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#include "Zombie.hpp"
 
-#include <iostream>
+Zombie::Zombie() : name("unknown"), type("unknown") {
+}
 
-class Pony {
-private:
+Zombie::Zombie(std::string name, std::string type) : name(name), type(type) {
+}
 
-	int					m_age;
-	int					m_speed;
-	int					m_rainbow_power;
+Zombie::~Zombie() {
+}
 
-public:
-
-	Pony();
-	~Pony();
-
-	void	pony_run();
-	void	pony_fly();
-	void	pony_train();
-	void	pony_grow();
-};
-
-#endif
+void	Zombie::announce() const {
+	std::cout << "<" << this->name << " (";
+	std::cout << this->type << ")> Braiiiiiiinnnssss..." << std::endl;
+}

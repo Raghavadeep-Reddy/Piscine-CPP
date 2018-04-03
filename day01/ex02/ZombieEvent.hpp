@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/30 17:58:05 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/03/30 17:58:06 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/03 15:08:44 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/03 15:08:45 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#ifndef ZOMBIEEVENT_HPP
+# define ZOMBIEEVENT_HPP
 
-#include <iostream>
+#include <string>
+#include "Zombie.hpp"
 
-class Pony {
+class ZombieEvent {
 private:
-
-	int					m_age;
-	int					m_speed;
-	int					m_rainbow_power;
-
+	std::string		type;
 public:
 
-	Pony();
-	~Pony();
+	ZombieEvent();
+	~ZombieEvent();
 
-	void	pony_run();
-	void	pony_fly();
-	void	pony_train();
-	void	pony_grow();
+	void	setZombieType(std::string type);
+	Zombie	*newZombie(std::string name) const;
+	void	randomChump();
 };
 
 #endif
