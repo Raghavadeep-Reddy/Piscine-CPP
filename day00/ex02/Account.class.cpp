@@ -19,6 +19,7 @@ int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
 
 int		Account::checkAmount(void) const {
+	_countCheckAmount++;
 	return (_amount);
 }
 
@@ -51,7 +52,7 @@ void	showTime() {
 
 Account::Account() :
 	_accountIndex(0), _amount(0),
-	_nbDeposits(0), _nbWithdrawals(0) {
+	_nbDeposits(0), _nbWithdrawals(0), _countCheckAmount(0) {
 	this->_accountIndex = _nbAccounts;
 	_totalAmount += _amount;
 	_nbAccounts++;
