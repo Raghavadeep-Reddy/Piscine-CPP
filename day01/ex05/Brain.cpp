@@ -26,7 +26,7 @@ std::string	Brain::identify() const {
 
 	ss << this;
 	str = ss.str();
-	for (int i = 2; i < str.length(); ++i) {
+	for (unsigned long i = 2; i < str.length(); ++i) {
 		str[i] = toupper(str[i]);
 	}
 	return (str);

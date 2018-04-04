@@ -19,6 +19,7 @@ ZombieHorde::ZombieHorde(int N) {
 		this->zombie[i].setRandomName();
 		zombie[i].setZombieType();
 	}
+	delete[] zombie;
 }
 
 ZombieHorde::~ZombieHorde() {

@@ -12,12 +12,12 @@
 
 #include "Logger.hpp"
 
-void	Logger::logToConsole(std::string str) {
+void	Logger::logToConsole(const std::string &str){
 	makeLogEntry(str);
 }
 
-void	Logger::logToFile(std::string str) {
-	std::ofstream ofs(this->name);
+void	Logger::logToFile(const std::string &str){
+	std::ofstream ofs(this->name, std::ofstream::app);
 	if (!ofs.is_open()) {
 		std::cout << "Open output file error." << std::endl;
 		exit(-1);
@@ -38,10 +38,17 @@ void	Logger::makeLogEntry(std::string msg) {
 }
 
 void	Logger::log(std::string const &dest, std::string const &message) {
-	if (dest == "logToFile")
-		logToFile(message);
-	else if (dest == "logToConsole")
-		logToConsole(message);
+
+	std::string command[] = {"Console", "File"};
+
+	typedef void (Logger::*Actions)(std::string const &message);
+	Actions actions[2] = {&Logger::logToConsole, &Logger::logToFile};
+
+	for (int i = 1; i >= 0; i--)
+		if (command[i] == dest) {
+			(this->*(actions[i]))(message);
+			break;
+		}
 }
 
 Logger::Logger(std::string name) {

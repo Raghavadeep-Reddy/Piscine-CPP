@@ -12,13 +12,13 @@
 
 #include "Human.hpp"
 
-void	Human::meleeAttack(std::string const &target){
+void	Human::meleeAttack(std::string const &target) {
 	std::cout << "Ataking with meleeAttack a " << target << std::endl;
 }
-void	Human::rangedAttack(std::string const &target){
+void	Human::rangedAttack(std::string const &target) {
 	std::cout << "Ataking with rangedAttack a " << target << std::endl;
 }
-void	Human::intimidatingShout(std::string const &target){
+void	Human::intimidatingShout(std::string const &target) {
 	std::cout << "Shouting with intimidatingShout a " << target << std::endl;
 }
 
@@ -26,12 +26,11 @@ void	Human::action(std::string const &action_name, std::string const &target)
 {
 	std::string actionsStr[] = {"meleeAttack", "rangedAttack", "intimidatingShout"};
 
-	typedef void (Human::*Actions)(std::string const & target);
+	typedef void (Human::*Actions)(std::string const &target);
 	Actions actions[3] = {&Human::meleeAttack, &Human::rangedAttack, &Human::intimidatingShout};
 
 	for (int i = 2; i >= 0; i--)
-		if (actionsStr[i] == action_name)
-		{
+		if (actionsStr[i] == action_name) {
 			(this->*(actions[i]))(target);
 			break;
 		}

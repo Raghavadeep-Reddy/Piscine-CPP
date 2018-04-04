@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/03 17:36:36 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/04/03 17:36:36 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/04 20:44:31 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/04 20:44:34 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
-#include "Weapon.hpp"
+#include <iostream>
 
-class HumanB
+class Fixed
 {
 private:
-	std::string	name;
-	Weapon		*weapon;
+	int		m_fixedValue;
+	static const int m_fractinalBits;
 public:
-	HumanB(std::string name);
-	~HumanB();
-
-	void	setWeapon(Weapon &weapon);
-	void	attack();
+	Fixed();
+	Fixed(const Fixed& fixedCopy);
+	Fixed &operator=(const Fixed& f);
+	~Fixed();
+	
+	int getRawBits(void) const;
+	void setRawBits(int const raw);
 };
 
 #endif

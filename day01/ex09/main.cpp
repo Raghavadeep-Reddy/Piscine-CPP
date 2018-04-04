@@ -16,7 +16,13 @@ int main()
 {
 	Logger l("test");
 
-	l.log("logToConsole", "logToConsole");
-	l.log("logToFile", "logToFile");
+	l.log("Console", "message");
+	l.log("Console", "1 more message");
+	l.log("Console", "logToConsole");
+	l.log("File", "logToFile");
+	l.log("File", "hello world");
+	l.log("File", ":)");
+	l.log("cat", "nothing will happen");
+	l.log("fish", "nothing will happen too");
 	return (0);
 }

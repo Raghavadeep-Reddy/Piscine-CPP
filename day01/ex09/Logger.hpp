@@ -21,8 +21,8 @@ class Logger
 private:
 	std::string name;
 
-	void	logToConsole(std::string str);
-	void	logToFile(std::string str);
+	void	logToConsole(const std::string &str);
+	void	logToFile(const std::string &str);
 	void	makeLogEntry(std::string msg);
 public:
 	Logger(std::string name);

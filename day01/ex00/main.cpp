@@ -31,7 +31,7 @@ void	ponyOnTheStack()
 	pony.pony_grow();
 }
 
-int	main(int argc, char **argv)
+int	main(void)
 {
 	ponyOnTheHeap();
 	std::cout << "==================" << std::endl;
