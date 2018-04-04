@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/04/03 19:02:16 by omiroshn          #+#    #+#              #
-#    Updated: 2018/04/03 19:02:18 by omiroshn         ###   ########.fr        #
+#    Created: 2018/04/04 15:01:25 by omiroshn          #+#    #+#              #
+#    Updated: 2018/04/04 15:01:26 by omiroshn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = replace
+NAME = cato9tails
 FILES = main
-HDRS = 
+HDRS =
 SRC = $(addsuffix .cpp, $(FILES))
 OBJ = $(addsuffix .o, $(FILES))
 FLAGS = -Wall -Wextra -Werror

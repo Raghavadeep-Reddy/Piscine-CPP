@@ -14,15 +14,21 @@
 #define LOGGER_HPP
 
 #include <iostream>
+#include <fstream>
 
 class Logger
 {
 private:
-	void	meleeAttack(std::string const & target);
-	void	rangedAttack(std::string const & target);
-	void	intimidatingShout(std::string const & target);
+	std::string name;
+
+	void	logToConsole(std::string str);
+	void	logToFile(std::string str);
+	void	makeLogEntry(std::string msg);
 public:
-	void	action(std::string const & action_name, std::string const & target);
+	Logger(std::string name);
+	~Logger();
+
+	void log(std::string const &dest, std::string const &message);
 };
 
 #endif

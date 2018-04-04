@@ -10,22 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "Logger.hpp"
-#include <iostream>
-
-class Logger
-{
-private:
-	void	logToConsole(std::string str);
-	void	logToFile(std::string str);
-public:
-	
-};
+#include "Logger.hpp"
 
 int main()
 {
-	Logger logger;
+	Logger l("test");
 
-	
+	l.log("logToConsole", "logToConsole");
+	l.log("logToFile", "logToFile");
 	return (0);
 }
