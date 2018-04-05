@@ -22,7 +22,14 @@ void	Logger::logToFile(const std::string &str){
 		std::cout << "Open output file error." << std::endl;
 		exit(-1);
 	}
-	ofs << str << std::endl;
+	time_t		rawtime;
+	struct tm	*timeinfo;
+	char		buffer[80];
+
+	time(&rawtime);
+	timeinfo = localtime(&rawtime);
+	strftime(buffer, 80, "[%Y%m%d_%H%M%S] ", timeinfo);
+	ofs << buffer << str << std::endl;
 	ofs.close();
 }
 
