@@ -13,20 +13,10 @@
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
-#include <iostream>
+#include "ClapTrap.hpp"
 
-class ScavTrap
+class ScavTrap : public ClapTrap 
 {
-private:
-	int	HP;
-	int MaxHP;
-	int Energy;
-	int MaxEnergy;
-	int Lvl;
-	std::string name;
-	int MeleeDamage;
-	int RangedDamage;
-	int DamageReduction;
 public:
 	ScavTrap();
 	ScavTrap(const std::string &name);

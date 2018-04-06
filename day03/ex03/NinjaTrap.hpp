@@ -1,45 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   NinjaTrap.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/05 23:42:47 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/04/05 23:42:49 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/06 12:05:08 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/06 12:05:09 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef NINJATRAP_HPP
+# define NINJATRAP_HPP
 
-#include <iostream>
+#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
-class ScavTrap
+class NinjaTrap : public ClapTrap 
 {
-private:
-	int	HP;
-	int MaxHP;
-	int Energy;
-	int MaxEnergy;
-	int Lvl;
-	std::string name;
-	int MeleeDamage;
-	int RangedDamage;
-	int DamageReduction;
 public:
-	ScavTrap();
-	ScavTrap(const std::string &name);
-	ScavTrap(const ScavTrap &ft, const std::string &name);
-	~ScavTrap();
+	NinjaTrap();
+	NinjaTrap(const std::string &name);
+	NinjaTrap(const NinjaTrap &ft, const std::string &name);
+	~NinjaTrap();
 
-	ScavTrap &operator=(const ScavTrap& ft);
+	NinjaTrap &operator=(const NinjaTrap& ft);
 
 	void	rangedAttack(std::string const &target);
 	void	meleeAttack(std::string const &target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
-	void	challengeNewcomer();
+	void	ninjaShoebox(FragTrap &ft, const std::string &action);
+	void	ninjaShoebox(ScavTrap &st, const std::string &action);
+	void	ninjaShoebox(NinjaTrap &nt, const std::string &action);
 };
 
 #endif

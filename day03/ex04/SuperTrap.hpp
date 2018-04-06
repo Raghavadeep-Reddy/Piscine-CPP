@@ -1,45 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   SuperTrap.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/05 23:42:47 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/04/05 23:42:49 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/06 12:50:27 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/06 12:50:28 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef SUPERTRAP_HPP
+# define SUPERTRAP_HPP
 
-#include <iostream>
+#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
+#include "NinjaTrap.hpp"
 
-class ScavTrap
+class SuperTrap : public virtual FragTrap, public virtual NinjaTrap
 {
-private:
-	int	HP;
-	int MaxHP;
-	int Energy;
-	int MaxEnergy;
-	int Lvl;
-	std::string name;
-	int MeleeDamage;
-	int RangedDamage;
-	int DamageReduction;
 public:
-	ScavTrap();
-	ScavTrap(const std::string &name);
-	ScavTrap(const ScavTrap &ft, const std::string &name);
-	~ScavTrap();
+	SuperTrap();
+	SuperTrap(const std::string &name);
+	SuperTrap(const SuperTrap &ft, const std::string &name);
+	~SuperTrap();
 
-	ScavTrap &operator=(const ScavTrap& ft);
-
+	SuperTrap &operator=(const SuperTrap& ft);
 	void	rangedAttack(std::string const &target);
 	void	meleeAttack(std::string const &target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
-	void	challengeNewcomer();
 };
 
 #endif

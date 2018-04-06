@@ -12,23 +12,35 @@
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() :
-	HP(100), MaxHP(100), Energy(50), MaxEnergy(50),
-	Lvl(1), name("Unknown"), MeleeDamage(20), RangedDamage(15),
-	DamageReduction(3) {
+ScavTrap::ScavTrap() : ClapTrap() { 
+	this->HP = 100;
+	this->Lvl = 1;
+	this->name = "Unknown";
+	this->MaxHP = 100;
+	this->Energy = 50;
+	this->MaxEnergy = 50;
+	this->MeleeDamage = 20;
+	this->RangedDamage = 15;
+	this->DamageReduction = 3;
 	std::cout << "SC4V-TP " << this->name << " appeares with HP: "
 	<< this->HP << ", Energy: " << this->Energy << std::endl;
 }
 
-ScavTrap::ScavTrap(const std::string &name) :
-	HP(100), MaxHP(100), Energy(50), MaxEnergy(50),
-	Lvl(1), name(name), MeleeDamage(20), RangedDamage(15),
-	DamageReduction(3) {
+ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name) {
+	this->HP = 100;
+	this->Lvl = 1;
+	this->name = name;
+	this->MaxHP = 100;
+	this->Energy = 50;
+	this->MaxEnergy = 50;
+	this->MeleeDamage = 20;
+	this->RangedDamage = 15;
+	this->DamageReduction = 3;
 	std::cout << "SC4V-TP " << this->name << " appeares with HP: "
 	<< this->HP << ", Energy: " << this->Energy << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &ft, const std::string &name) {
+ScavTrap::ScavTrap(const ScavTrap &ft, const std::string &name) : ClapTrap(name) {
 	*this = ft;
 	std::cout << "SC4V-TP " << name
 	<< " copies from " << this->name << " with HP: "

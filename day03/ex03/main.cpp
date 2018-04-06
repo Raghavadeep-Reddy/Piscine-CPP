@@ -10,14 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
 
 int main()
 {
 	srand (time(NULL));
-	FragTrap FT("Lesha");
-	ScavTrap ST("ScavTrap");
+	ClapTrap CP("Parent");
+	FragTrap FT("Child Lesha");
+	ScavTrap ST("Child Misha");
+	NinjaTrap NT("Child Naruto");
 
 	std::cout << "==================" << std::endl;
 
@@ -29,6 +33,10 @@ int main()
 	ST.rangedAttack("Max");
 	ST.challengeNewcomer();
 
+	std::cout << "==================" << std::endl;
+
+	NT.meleeAttack("Obito");
+	NT.ninjaShoebox(FT, "meleeAttack");
 	std::cout << "==================" << std::endl;
 
 	return (0);

@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/05 23:42:47 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/04/05 23:42:49 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/06 11:08:07 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/06 11:08:08 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 #include <iostream>
 
-class ScavTrap
+class ClapTrap
 {
-private:
+protected:
 	int	HP;
 	int MaxHP;
 	int Energy;
@@ -28,18 +28,13 @@ private:
 	int RangedDamage;
 	int DamageReduction;
 public:
-	ScavTrap();
-	ScavTrap(const std::string &name);
-	ScavTrap(const ScavTrap &ft, const std::string &name);
-	~ScavTrap();
-
-	ScavTrap &operator=(const ScavTrap& ft);
-
-	void	rangedAttack(std::string const &target);
-	void	meleeAttack(std::string const &target);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
-	void	challengeNewcomer();
+	ClapTrap();
+	ClapTrap(const std::string &name);
+	ClapTrap(const ClapTrap &ft, const std::string &name);
+	~ClapTrap();
+	
+	std::string getName();
+	ClapTrap &operator=(const ClapTrap& ft);
 };
 
 #endif

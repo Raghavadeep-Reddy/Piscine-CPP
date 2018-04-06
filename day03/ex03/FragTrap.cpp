@@ -12,23 +12,35 @@
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() :
-	HP(10), MaxHP(100), Energy(30), MaxEnergy(100),
-	Lvl(1), name("Unknown"), MeleeDamage(30), RangedDamage(20),
-	DamageReduction(5) {
+FragTrap::FragTrap() : ClapTrap() {
+	this->HP = 10;
+	this->Lvl = 1;
+	this->name = "Unknown";
+	this->MaxHP = 100;
+	this->Energy = 100;
+	this->MaxEnergy = 100;
+	this->MeleeDamage = 30;
+	this->RangedDamage = 20;
+	this->DamageReduction = 5;
 	std::cout << "FR4G-TP " << this->name << " was created with HP: "
 	<< this->HP << ", Energy: " << this->Energy << std::endl;
 }
 
-FragTrap::FragTrap(const std::string &name) :
-	HP(100), MaxHP(100), Energy(100), MaxEnergy(100),
-	Lvl(1), name(name), MeleeDamage(30), RangedDamage(20),
-	DamageReduction(5) {
+FragTrap::FragTrap(const std::string &name) : ClapTrap(name) {
+	this->HP = 100;
+	this->Lvl = 1;
+	this->name = name;
+	this->MaxHP = 100;
+	this->Energy = 100;
+	this->MaxEnergy = 100;
+	this->MeleeDamage = 30;
+	this->RangedDamage = 20;
+	this->DamageReduction = 5;
 	std::cout << "FR4G-TP " << this->name << " was created with HP: "
 	<< this->HP << ", Energy: " << this->Energy << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &ft, const std::string &name) {
+FragTrap::FragTrap(const FragTrap &ft, const std::string &name) : ClapTrap(name) {
 	*this = ft;
 	std::cout << "FR4G-TP " << name
 	<< " was copied from " << this->name << " with HP: "
