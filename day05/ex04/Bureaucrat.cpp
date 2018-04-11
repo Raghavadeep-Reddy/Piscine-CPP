@@ -75,9 +75,24 @@ void	Bureaucrat::signForm(Form &form) const {
 		form.beSigned(*this);
 		std::cout << "Bureaucrat " << name << " signs " << form.getName() << std::endl;
 	}
-	catch (Form::GradeTooLowException) {
+	catch (Form::GradeTooLowException)
+	{
 		std::cout << "Bureaucrat " << name << " cannot sign " << form.getName() << " because his grade is too low (His grade is "
-			<< grade << " but should be at least " << form.getSigned() << ")." << std::endl;
+		<< grade << " but should be at least " << form.getGradeFS() - 1 << ")." << std::endl;
+	}
+}
+
+void	Bureaucrat::executeForm(const Form &form) {
+	try
+	{
+		form.execute(*this);
+		std::cout << "Bureaucrat " << name << " (Grade " << grade << ") executes a " << form.getName()
+		<<	" (s.grade " << form.getGradeFS() << ", ex.grade " << form.getGradeEX()
+		<< ") targeted on " << form.getTarget() << " (Signed)." << std::endl;
+	}
+	catch (Form::GradeTooLowException)
+	{
+		std::cout << "The formular " << form.getName() << " was not executed because it's executor grade is too low." << std::endl;
 	}
 }
 
@@ -88,7 +103,6 @@ const char*			Bureaucrat::GradeTooHighException::what() const throw() {
 const char*			Bureaucrat::GradeTooLowException::what() const throw() {
 	return ("The Grade is too low!");
 }
-
 
 void			Bureaucrat::incrementGrade() {
 	Bureaucrat::GradeTooHighException high;

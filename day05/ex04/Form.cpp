@@ -75,7 +75,6 @@ void			Form::beSigned(const Bureaucrat& bc) {
 	if (bc.getGrade() > this->gradeExecute)
 		throw low;
 	this->_signed = true;
-	std::cout << bc.getName() << " succesfully signed" << std::endl;
 }
 
 Form::Form(std::string name, int gradeS, int gradeEx) :

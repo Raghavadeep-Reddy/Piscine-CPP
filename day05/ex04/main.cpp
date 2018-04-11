@@ -13,74 +13,37 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "OfficeBlock.hpp"
 #include "Bureaucrat.hpp"
+#include "Intern.hpp"
 #include "Form.hpp"
 
 int main(void)
 {
+	Intern idiotOne;
+	Bureaucrat hermes = Bureaucrat("Hermes Conrad", 37);
+	Bureaucrat bob = Bureaucrat("Bobby Bobson", 4);
+	OfficeBlock ob;
+
+	ob.setIntern(idiotOne);
+	ob.setSigner(bob);
+	ob.setExecutor(hermes);
+
+	try
 	{
-		try {
-			Bureaucrat a("Bot", 1);
-			ShrubberyCreationForm b("home");
-
-			std::cout << b;
-			std::cout << a;
-			a.signForm(b);
-			b.execute(a);
-		 }
-		 catch (std::exception &e)
-		 {
-			std::cout << e.what() << std::endl;
-		 }
+		ob.doBureaucracy("mutant pig termination", "Pigley");
 	}
-	std::cout << "=================================" << std::endl;
+	catch (std::exception & e)
 	{
-		try
-		{
-			Bureaucrat a("Bot", 1);
-			RobotomyRequestForm b("home");
-
-			std::cout << b;
-			std::cout << a;
-			a.signForm(b);
-			b.execute(a);
-
-			Bureaucrat c("Bot", 150);
-			RobotomyRequestForm d("home2");
-
-			std::cout << d;
-			std::cout << c;
-			c.signForm(d);
-			d.execute(c);
-		}
-		catch (std::exception &e)
-		{
-			std::cout << e.what() << std::endl;
-		}
+		std::cout << e.what() << std::endl;
 	}
-	std::cout << "=================================" << std::endl;
+	try
 	{
-		try
-		{
-			Bureaucrat a("Bot", 1);
-			PresidentialPardonForm b("home");
-
-			std::cout << b;
-			std::cout << a;
-			a.signForm(b);
-			b.execute(a);
-
-			Bureaucrat c("Bot", 150);
-			PresidentialPardonForm d("home2");
-
-			std::cout << d;
-			std::cout << c;
-			d.execute(c);
-		}
-		catch (std::exception &e)
-		{
-			std::cout << e.what() << std::endl;
-		}
+		ob.doBureaucracy("presidential pardon", "Pigley");
 	}
-	return (0);
+	catch (std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	return(0);
 }

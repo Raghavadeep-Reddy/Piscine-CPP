@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   OfficeBlock.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/10 14:47:03 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/04/10 14:47:04 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/10 19:00:27 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/10 19:00:30 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM_HPP
-#define ROBOTOMYREQUESTFORM_HPP
+#ifndef OFFICEBLOCK_HPP
+#define OFFICEBLOCK_HPP
 
 #include <iostream>
-#include "Form.hpp"
 #include "Bureaucrat.hpp"
+#include "Intern.hpp"
+#include "Form.hpp"
 
-class RobotomyRequestForm : public Form
+class OfficeBlock
 {
 private:
-	std::string	target;
-	RobotomyRequestForm();
+	OfficeBlock(OfficeBlock const & cpy);
+	OfficeBlock&	operator=(OfficeBlock const & cpy);
+	Intern			*intern;
+	Bureaucrat		*signer;
+	Bureaucrat		*executor;
 public:
-	std::string			getTarget() const;
-	RobotomyRequestForm(const std::string & target);
-	RobotomyRequestForm(const RobotomyRequestForm & rbt);
-	RobotomyRequestForm& operator=(const RobotomyRequestForm & rbt);
-	virtual			~RobotomyRequestForm();
-	virtual void	execute(Bureaucrat const & executor) const;
+	OfficeBlock();
+	~OfficeBlock();
+	void	setIntern(Intern& intern);
+	void	setSigner(Bureaucrat& borya);
+	void	setExecutor(Bureaucrat& borya);
+	void	doBureaucracy(const std::string &name, const std::string &target);
 };
 
 #endif

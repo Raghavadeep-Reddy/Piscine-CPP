@@ -15,45 +15,50 @@
 
 int main(void)
 {
-
-	Bureaucrat borya("Borya", 5);
-	Bureaucrat vasya("Vasya", 3);
-	std::cout << borya;
-	std::cout << vasya;
-
-	std::cout << "====================" << std::endl;
-	std::cout << "==== Cant sign ===" << std::endl;
-	Form f1("For Borya", 1, 10);
-	Form f2("For Vasya", 3, 3);
-
+	std::cout << "============================" << std::endl;
+	std::cout << "===== Can sign =============" << std::endl;
 	try
 	{
-		std::cout << f1;
-		f1.beSigned(borya);
+		Bureaucrat vasya("Vasya", 100);
+		Form paper("Toilet Paper", 150, 150);
+
+		std::cout << vasya;
+		std::cout << paper;
+		vasya.signForm(paper);
 	}
 	catch (std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
-	std::cout << "=== All is good ===" << std::endl;
+	std::cout << "==== Cant sign ==============" << std::endl;
 	try
 	{
-		std::cout << f2;
-		f2.beSigned(vasya);
+		Bureaucrat	borya("Borya", 5);
+		Form		law("Law", 1, 1);
+
+		std::cout << borya;
+		std::cout << law;
+		borya.signForm(law);
 	}
 	catch (std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
-	std::cout << "=== Already signed ===" << std::endl;
+	std::cout << "=== Already signed ============" << std::endl;
 	try
 	{
-		std::cout << f2;
-		f2.beSigned(vasya);
+		Bureaucrat borya("Borya", 100);
+		Form paper("Toilet Paper", 150, 150);
+
+		std::cout << borya;
+		std::cout << paper;
+		borya.signForm(paper);
+		borya.signForm(paper);
 	}
 	catch (std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << "============================" << std::endl;
 	return (0);
 }

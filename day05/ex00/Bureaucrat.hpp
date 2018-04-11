@@ -29,7 +29,7 @@ public:
 	int				getGrade() const;
 	void			incrementGrade();
 	void			decrementGrade();
-	~Bureaucrat();
+	virtual			~Bureaucrat();
 	class			GradeTooHighException : public std::exception {
 		public:
 			GradeTooHighException();

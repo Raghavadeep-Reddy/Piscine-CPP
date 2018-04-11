@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include "Bureaucrat.hpp"
+class Bureaucrat;
 
 class Form
 {
@@ -49,7 +50,7 @@ public:
 			virtual const char *what() const throw();
 	};
 					Form(std::string name, int gradeS, int gradeEx);
-					~Form();
+	virtual			~Form();
 					Form(const Form &form);
 	Form&			operator=(const Form &from);
 	std::string		getName() const;

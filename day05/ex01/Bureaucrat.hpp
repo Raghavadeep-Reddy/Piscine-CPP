@@ -14,6 +14,8 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
+#include "Form.hpp"
+class Form;
 
 class Bureaucrat
 {
@@ -29,8 +31,8 @@ public:
 	int				getGrade() const;
 	void			incrementGrade();
 	void			decrementGrade();
-	void			beSigned();
-	~Bureaucrat();
+	virtual			~Bureaucrat();
+	void			signForm(Form &form) const;
 	class			GradeTooHighException : public std::exception {
 		public:
 			GradeTooHighException();
