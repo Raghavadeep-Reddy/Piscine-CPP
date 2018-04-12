@@ -10,9 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = array
-FILES = main
-HDRS = Array.hpp
+NAME = span
+FILES = main span
+HDRS = span.hpp
 SRC = $(addsuffix .cpp, $(FILES))
 OBJ = $(addsuffix .o, $(FILES))
 FLAGS = -Wall -Wextra -Werror

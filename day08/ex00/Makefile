@@ -10,9 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = array
+NAME = easyfing
 FILES = main
-HDRS = Array.hpp
+HDRS = easyfing.hpp
 SRC = $(addsuffix .cpp, $(FILES))
 OBJ = $(addsuffix .o, $(FILES))
 FLAGS = -Wall -Wextra -Werror

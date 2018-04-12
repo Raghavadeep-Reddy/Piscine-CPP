@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.cpp                                           :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omiroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/12 00:17:03 by omiroshn          #+#    #+#             */
-/*   Updated: 2018/04/12 00:17:04 by omiroshn         ###   ########.fr       */
+/*   Created: 2018/04/12 18:52:45 by omiroshn          #+#    #+#             */
+/*   Updated: 2018/04/12 18:52:46 by omiroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef EASYFIND_HPP
+#define EASYFIND_HPP
+
 #include <iostream>
+#include <list>
+#include <algorithm>
 
 template<typename T>
-void	iter(T* array, const unsigned int& length, void (*f)(T const &ref)) {
-	
-	for (unsigned int i = 0; i < length; ++i)
-		f(array[i]);
-}
-
-template< typename T >
-void	print(T var) {
-	std::cout << var << std::endl;
-}
-
-int	main( void )
+void	easyFind(T list, int num)
 {
-	int foo[] = { 16, 2, 77, 40, 12071 };
-	std::string fuu[] = { "lol", "swag", "yolo" };
+	typename T::iterator it;
 
-	::iter(foo, 5, ::print);
-	::iter(fuu, 3, ::print);
-	return (0);
+	it = std::find(list.begin(), list.end(), num);
+	if (it == list.end())
+		throw std::runtime_error("No occurences");
+	int dist = std::distance(list.begin(), it);
+	std::cout << "The first occurence of " << num << " is on the "
+	<< dist + 1 << " position in the container" << std::endl;
 }
+
+#endif
