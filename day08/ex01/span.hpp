@@ -17,19 +17,24 @@
 #include <algorithm>
 #include <list>
 #include <vector>
+#include <numeric>
 
 class Span
 {
 private:
-	std::vector<unsigned int> _v;
+	std::vector<int> _v;
 public:
 	Span();
-	Span(int N);
+	Span(unsigned int N);
+	Span(int *num, unsigned int N);
 	~Span();
-	int			shortestSpan();
-	int			longestSpan();
+	Span(const Span &cpy);
+	Span &operator=(const Span &cpy);
+	unsigned		shortestSpan();
+	unsigned		longestSpan();
 	void			addNumber(unsigned int N);
-	void	generateNumbers(unsigned int N);
+	void			generateNumbers(unsigned int N);
+	int				abs_diff(int const a, int const b);
 };
 
 #endif
