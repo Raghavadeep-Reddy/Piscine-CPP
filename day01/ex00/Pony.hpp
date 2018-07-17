@@ -18,9 +18,9 @@
 class Pony {
 private:
 
-	int					m_age;
-	int					m_speed;
-	int					m_rainbow_power;
+	int		m_age;
+	int		m_speed;
+	int		m_rainbow_power;
 
 public:
 

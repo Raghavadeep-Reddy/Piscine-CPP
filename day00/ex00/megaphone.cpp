@@ -19,10 +19,8 @@ char	*to_upper(char *str)
 
 	temp = (char*)str;
 	while (temp[++i])
-	{
 		if (temp[i] >= 97 && temp[i] <= 122)
 			temp[i] -= 32;
-	}
 	return (temp);
 }
 
@@ -40,6 +38,6 @@ int main(int argc, char **argv)
 			argc--;
 		}
 		std::cout << "\n";
-	}	
+	}
 	return (0);
 }

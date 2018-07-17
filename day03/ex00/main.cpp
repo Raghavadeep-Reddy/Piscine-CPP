@@ -21,7 +21,7 @@ int main()
 
 	std::cout << "==================" << std::endl;
 
-	FT.rangedAttack("Vasya"); 
+	FT.rangedAttack("Vasya");
 	FT.vaulthunter_dot_exe("Vasya");
 	FT2.rangedAttack("Max");
 	FT2.vaulthunter_dot_exe("Max");

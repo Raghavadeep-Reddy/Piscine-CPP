@@ -48,7 +48,7 @@ Data	*deserialize(void *raw)
 int		main(void)
 {
 	srand(time(NULL));
-	
+
 	void *ptr;
 	Data *data = new Data;
 

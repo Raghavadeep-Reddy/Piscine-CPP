@@ -12,11 +12,6 @@
 
 #include <iostream>
 
-// std::ostream& operator<< (std::ostream& os, const className& aw) {
-// 	os << aw.getN();
-// 	return (os);
-// }
-
 template<typename T>
 void swap(T &a, T &b) {
 	T temp;
@@ -36,7 +31,6 @@ T max(T a, T b) {
 }
 
 int main( void ) {
-	
 	int a = 2;
 	int b = 3;
 
@@ -53,11 +47,5 @@ int main( void ) {
 	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
 	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
 
-	// className aw(2);
-	// className aw2(3);
-	// ::swap( aw, aw2 );
-	// std::cout << "aw = " << aw << ", aw2 = " << aw2 << std::endl;
-	// std::cout << "min( aw, aw2 ) = " << ::min( aw, aw2 ) << std::endl;
-	// std::cout << "max( aw, aw2 ) = " << ::max( aw, aw2 ) << std::endl;
 	return 0;
 }

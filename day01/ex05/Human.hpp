@@ -21,7 +21,7 @@ private:
 public:
 	Human();
 	~Human();
-	
+
 	Brain		&getBrain();
 	std::string	identify() const;
 };

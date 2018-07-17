@@ -12,7 +12,7 @@
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() : ClapTrap() { 
+ScavTrap::ScavTrap() : ClapTrap() {
 	this->HP = 100;
 	this->Lvl = 1;
 	this->name = "Unknown";
@@ -76,7 +76,7 @@ void	ScavTrap::meleeAttack(std::string const &target) {
 	<< " attacks " << target << " in melee, doing "
 	<< this->MeleeDamage << " points of damage!" << std::endl;
 }
-	
+
 void	ScavTrap::takeDamage(unsigned int amount) {
 	this->HP -= amount;
 	this->HP += this->DamageReduction;

@@ -26,7 +26,7 @@ int main()
 
 	std::cout << "==================" << std::endl;
 
-	FT.rangedAttack("Vasya"); 
+	FT.rangedAttack("Vasya");
 	FT.vaulthunter_dot_exe("Vasya");
 
 	std::cout << "==================" << std::endl;
@@ -40,7 +40,7 @@ int main()
 	NT.ninjaShoebox(FT, "meleeAttack");
 
 	std::cout << "==================" << std::endl;
-	
+
 	SuperTrap SuperT("Child SuperMan");
 
 	std::cout << "==================" << std::endl;

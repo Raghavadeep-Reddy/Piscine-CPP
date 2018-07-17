@@ -27,7 +27,7 @@ public:
 
 	std::string		getName( void ) const;
 	void			setName( std::string const arg );
-	
+
 	Victim&			operator=(Victim const & arg);
 	virtual void	getPolymorphed() const;
 };

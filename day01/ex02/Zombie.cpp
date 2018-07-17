@@ -17,7 +17,7 @@ Zombie::Zombie() : name("unknown"), type("unknown") {
 }
 
 Zombie::Zombie(std::string name, std::string type) : name(name), type(type) {
-	
+
 }
 
 Zombie::~Zombie() {

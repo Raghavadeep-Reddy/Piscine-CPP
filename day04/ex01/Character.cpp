@@ -68,11 +68,11 @@ std::ostream	&operator<<(std::ostream& flux, const Character& arg) {
 		flux	<< arg.getName() << " has "
 				<< arg.getAPPoints() << " AP and wields a "
 				<< weapon->getName()
-			<<  std::endl;	
+			<<  std::endl;
 	} else {
 		flux	<< arg.getName() << " has "
 				<< arg.getAPPoints() << " and is unarmed"
-			<<  std::endl;	
+			<<  std::endl;
 	}
 	return (flux);
 }

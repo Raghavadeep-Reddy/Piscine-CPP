@@ -32,7 +32,7 @@ public:
 	ClapTrap(const std::string &name);
 	ClapTrap(const ClapTrap &ft, const std::string &name);
 	~ClapTrap();
-	
+
 	int			getHP();
 	int			getMaxHP();
 	int			getEnergy();

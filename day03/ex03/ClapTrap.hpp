@@ -32,7 +32,7 @@ public:
 	ClapTrap(const std::string &name);
 	ClapTrap(const ClapTrap &ft, const std::string &name);
 	~ClapTrap();
-	
+
 	std::string getName();
 	ClapTrap &operator=(const ClapTrap& ft);
 };

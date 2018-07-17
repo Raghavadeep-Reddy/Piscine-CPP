@@ -48,7 +48,7 @@ Zombie	*ZombieEvent::newZombie(std::string name) const {
 void	ZombieEvent::randomChump()
 {
 	char PlayerName[21];
-	
+
 	PlayerName[0] = 0;
 	strcat(PlayerName, NamePrefix[(rand() % 7)]);
 	strcat(PlayerName, NameStems[(rand() % 20)]);

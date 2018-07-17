@@ -12,7 +12,6 @@
 
 NAME = iter
 FILES = iter
-HDRS = 
 SRC = $(addsuffix .cpp, $(FILES))
 OBJ = $(addsuffix .o, $(FILES))
 FLAGS = -Wall -Wextra -Werror

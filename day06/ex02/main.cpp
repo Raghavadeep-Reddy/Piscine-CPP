@@ -49,7 +49,6 @@ void identify_from_reference(Base &p) {
 int		main(void)
 {
 	srand(time(NULL));
-	
 	Base *base;
 
 	base = generate();

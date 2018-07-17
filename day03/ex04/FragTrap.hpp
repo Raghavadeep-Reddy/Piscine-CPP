@@ -29,7 +29,7 @@ public:
 	void	virtual meleeAttack(std::string const &target);
 	void	virtual takeDamage(unsigned int amount);
 	void	virtual beRepaired(unsigned int amount);
-	
+
 	void	vaulthunter_dot_exe(std::string const &target);
 };
 

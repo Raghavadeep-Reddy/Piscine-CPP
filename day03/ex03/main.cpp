@@ -25,7 +25,7 @@ int main()
 
 	std::cout << "==================" << std::endl;
 
-	FT.rangedAttack("Vasya"); 
+	FT.rangedAttack("Vasya");
 	FT.vaulthunter_dot_exe("Vasya");
 
 	std::cout << "==================" << std::endl;

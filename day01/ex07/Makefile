@@ -12,7 +12,6 @@
 
 NAME = replace
 FILES = main
-HDRS = 
 SRC = $(addsuffix .cpp, $(FILES))
 OBJ = $(addsuffix .o, $(FILES))
 FLAGS = -Wall -Wextra -Werror

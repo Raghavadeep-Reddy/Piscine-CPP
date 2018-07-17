@@ -22,7 +22,7 @@ Span::Span(unsigned int N) {
 
 Span::Span(int *num, unsigned int N) {
 	_v.reserve(N);
-	
+
 	for (unsigned int i = 0; i < N; ++i)
 		_v.push_back(num[i]);
 }

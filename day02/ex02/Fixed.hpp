@@ -41,7 +41,7 @@ public:
 	bool   operator  > (const Fixed &f);
 	bool   operator == (const Fixed &f);
 	bool   operator != (const Fixed &f);
-	
+
 	static Fixed&	max(Fixed const & f1, Fixed const & f2);
 	static Fixed&	min(Fixed const & f1, Fixed const & f2);
 	int		getRawBits(void) const;

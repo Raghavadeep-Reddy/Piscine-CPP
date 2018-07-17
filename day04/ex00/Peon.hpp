@@ -23,7 +23,7 @@ private:
 public:
 	Peon(std::string name);
 	Peon(Peon const &cpy);
-	~Peon();	
+	~Peon();
 
 	virtual void	getPolymorphed() const;
 };

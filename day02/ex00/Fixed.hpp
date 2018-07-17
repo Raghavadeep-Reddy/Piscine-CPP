@@ -25,7 +25,7 @@ public:
 	Fixed(const Fixed& fixedCopy);
 	Fixed &operator=(const Fixed& f);
 	~Fixed();
-	
+
 	int getRawBits(void) const;
 	void setRawBits(int const raw);
 };

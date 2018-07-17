@@ -12,7 +12,7 @@
 
 #include "NinjaTrap.hpp"
 
-NinjaTrap::NinjaTrap() : ClapTrap() { 
+NinjaTrap::NinjaTrap() : ClapTrap() {
 	this->HP = 60;
 	this->Lvl = 1;
 	this->name = "未知の";
@@ -76,7 +76,7 @@ void	NinjaTrap::meleeAttack(std::string const &target) {
 	<< " 攻撃 " << target << " 接近戦では、 "
 	<< this->MeleeDamage << " dmg ダメージのポイント！" << std::endl;
 }
-	
+
 void	NinjaTrap::takeDamage(unsigned int amount) {
 	this->HP -= amount;
 	this->HP += this->DamageReduction;

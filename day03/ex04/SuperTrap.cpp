@@ -74,11 +74,11 @@ void	SuperTrap::rangedAttack(std::string const &target) {
 void	SuperTrap::meleeAttack(std::string const &target) {
 	NinjaTrap::meleeAttack(target);
 }
-	
-void	SuperTrap::takeDamage(unsigned int amount) { 
+
+void	SuperTrap::takeDamage(unsigned int amount) {
 	FragTrap::takeDamage(amount);
 }
 
-void	SuperTrap::beRepaired(unsigned int amount) { 
+void	SuperTrap::beRepaired(unsigned int amount) {
 	FragTrap::beRepaired(amount);
 }
