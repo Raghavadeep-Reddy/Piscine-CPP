@@ -1,6 +1,6 @@
 Piscine CPP
 ===
-### [Day 00] - Namespace, class, member functions, stdio stream, initialization lists, and lots of basic stuf ```100/100```
+### [Day 00] - Namespace, classes, member functions and lots of basic stuf ```100/100```
 ### [Day 01] - Memory allocation, References, Pointers to members, File streams ```96/100```
 ### [Day 02] - Ad-hoc polymorphism, operators overload and canonical classes ```70/100```
 ### [Day 03] - Inheritance ```100/100```
