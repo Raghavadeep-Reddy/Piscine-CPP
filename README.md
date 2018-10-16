@@ -11,3 +11,10 @@ Piscine CPP
 ### [Day 08] - Templated containers, iterators, algorithms ```60/100```
 ### [Rush00] - ft_retro ```120/100```
 ### [Rush01] - ft_gkrellm ```125/100```
+
+#                        **  Message to 42 students  **
+You are free to copy, modify and share under your name my exercises. But you
+will learn nothing, or will have the impression to understand without be able
+to do it again alone. Be responsible and simply ask for help.
+
+                                                                         omiroshn
