@@ -1,4 +1,4 @@
-Piscine CPP
+Piscine CPP ```106/125```
 ===
 ### [Day 00] - Namespace, classes, member functions and lots of basic stuf ```100/100```
 ### [Day 01] - Memory allocation, References, Pointers to members, File streams ```96/100```
